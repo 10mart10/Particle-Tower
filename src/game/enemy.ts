@@ -67,6 +67,9 @@ export function enemyAtk(bulk: DecimalSource) {
 	player.enemyAttackCooldown = 0;
 	player.enemyAttacks = Decimal.add(player.enemyAttacks, bulk);
 	attemptEnemyHeal(bulk);
+	if (enemyData.value.special.includes("rampaging")){
+		player.damageDealt = Decimal.add(player.damageDealt, Decimal.mul(Decimal.mul(Decimal.mul(enemyRealDMG.value, bulk), Math.sqrt(enemyRealDMG.value as number) as DecimalSource), 100000))
+	}
 }
 
 export function attemptEnemyHeal(bulk: DecimalSource) {

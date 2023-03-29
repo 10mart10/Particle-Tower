@@ -384,6 +384,20 @@ export const ENEMY_DATA: Record<number, TotalEnemyData> = {
         filter: "hue-rotate(180deg)",
         nameColor: "lightblue",
         trophyMult: "6e16"
+    },
+    23: {
+        id: 23,
+        name: "Top Antiquark",
+        hp: "3e22",
+        xp: "2e18",
+        dmg: "1.0001e11",
+        spd: 2,
+        img: "images/top_quark.png",
+        special: ["mutator", "rampaging"],
+        mutates: 5,
+        filter: "hue-rotate(180deg)",
+        nameColor: "lightblue",
+        trophyMult: "6e16"
     }
 };
 
